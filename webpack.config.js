@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ENV_PRODUCTION = 'production' === process.env.WEBPACK_ENV;
-const DEPLOY_DIR = !!process.env.DEPLOY_DIR ? `/sso/${process.env.DEPLOY_DIR}/` : '/';
+const DEPLOY_DIR = !!process.env.DEPLOY_DIR ? `/${process.env.DEPLOY_DIR}/` : '/';
 
 let config = {
   entry: {
