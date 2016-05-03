@@ -50,7 +50,7 @@
     "test": "./node_modules/.bin/karma start",
     "typings-install": "./node_modules/.bin/typings install",
     "postinstall": "npm run typings-install",
-    "clean": "rm -rf ./node_modules/* ./typings/*"
+    "clean": "rm -rf ./node_modules/* ./typings/* ./dist/*"
   },
   "repository": {
     "type": "git",
