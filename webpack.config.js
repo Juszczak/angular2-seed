@@ -56,7 +56,10 @@ let config = {
         path.resolve(__dirname, './src/index.html'),
       ]
     }, {
-      test: /global.styl/,
+      test: /\.css$/,
+      loader: 'raw'
+    }, {
+      test: /global\.styl/,
       loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus'),
     }, {
       test: /\.styl$/,
