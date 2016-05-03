@@ -2,18 +2,18 @@ import './polyfills.ts';
 import './vendor.ts';
 import './styles.ts';
 
-import { enableProdMode } from 'angular2/core';
+import { enableProdMode } from '@angular/core';
 
 if ('production' === WEBPACK_ENV) {
   enableProdMode();
 }
 
-import { bootstrap } from 'angular2/platform/browser';
+import { bootstrap } from '@angular/platform-browser-dynamic';
 
-import { FORM_PROVIDERS } from 'angular2/common';
-import { ROUTER_PROVIDERS } from 'angular2/router';
-import { HTTP_PROVIDERS } from 'angular2/http';
-import { Type } from 'angular2/core';
+import { FORM_PROVIDERS } from '@angular/common';
+import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { Type } from '@angular/core';
 
 import { App } from './app/app.component';
 

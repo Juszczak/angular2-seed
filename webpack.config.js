@@ -36,12 +36,13 @@ let config = {
       exclude: [
         // these packages have problems with their sourcemaps
         path.join(__dirname, 'node_modules', 'rxjs'),
+        path.join(__dirname, 'node_modules', '@angular'),
         path.join(__dirname, 'node_modules', '@angular2-material'),
       ]
     }, ],
     noParse: [
       path.join(__dirname, 'node_modules', 'zone.js', 'dist'),
-      path.join(__dirname, 'node_modules', 'angular2', 'bundles')
+      path.join(__dirname, 'node_modules', '@angular', 'src'),
     ],
     loaders: [{
       test: /\.json$/,

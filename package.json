@@ -11,7 +11,15 @@
     "darwin"
   ],
   "dependencies": {
-    "angular2": "^2.0.0-beta.17",
+    "@angular/common": "^2.0.0-rc.0",
+    "@angular/compiler": "^2.0.0-rc.0",
+    "@angular/core": "^2.0.0-rc.0",
+    "@angular/http": "2.0.0-rc.0",
+    "@angular/platform-browser": "^2.0.0-rc.0",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.0",
+    "@angular/router": "^2.0.0-rc.0",
+    "@angular/router-deprecated": "2.0.0-rc.0",
+    "@angular/upgrade": "2.0.0-rc.0",
     "core-js": "^2.2.2",
     "normalize.css": "^4.1.1",
     "reflect-metadata": "^0.1.3",
