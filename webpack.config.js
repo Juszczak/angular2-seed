@@ -49,7 +49,7 @@ let config = {
       loader: 'json'
     }, {
       test: /\.ts$/,
-      loader: 'awesome-typescript'
+      loader: 'ts'
     }, {
       test: /\.html$/,
       loader: 'raw',
