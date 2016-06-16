@@ -48,7 +48,7 @@ let config = {
       loader: 'json'
     }, {
       test: /\.ts$/,
-      loader: 'ts'
+      loader: 'ts',
     }, {
       test: /\.html$/,
       loader: 'raw',
@@ -85,12 +85,6 @@ let config = {
   plugins: [
     new Webpack.DefinePlugin({
       WEBPACK_ENV: ENV_PRODUCTION ? '"production"' : '"dev"',
-    }),
-    new Webpack.optimize.CommonsChunkPlugin({
-      name: [
-        'main',
-      ],
-      minChunks: Infinity
     }),
     new ExtractTextPlugin('global.[hash].css'),
     new HtmlPlugin({
