@@ -32,12 +32,11 @@ let config = {
       loader: 'tslint'
     }, {
       test: /\.js$/,
-      loader: 'source-map-loader',
+      loader: 'source-map',
       exclude: [
         // these packages have problems with their sourcemaps
         path.join(__dirname, 'node_modules', 'rxjs'),
         path.join(__dirname, 'node_modules', '@angular'),
-        path.join(__dirname, 'node_modules', '@angular2-material'),
       ]
     }, ],
     noParse: [
@@ -118,22 +117,26 @@ let config = {
     }),
   ],
   devServer: {
+    progress: true,
     contentBase: './src',
     port: 1337,
     isplayCached: true,
     displayErrorDetails: true,
     historyApiFallback: true,
+    compress: false,
+    quiet: false,
+    noInfo: false,
     hot: false,
     inline: true,
     watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
+      aggregateTimeout: 100,
+      poll: 500
     },
     stats: {
       colors: true,
     },
   },
-  devtool: 'source-map',
+  devtool: ENV_PRODUCTION ? '#source-map' : '#eval-source-map',
   cache: true,
   debug: true,
   node: {

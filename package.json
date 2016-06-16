@@ -53,7 +53,7 @@
     "webpack-dev-server": "^2.0.0-beta"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --progress",
+    "start": "./node_modules/.bin/webpack-dev-server",
     "build": "rm -rf ./dist && WEBPACK_ENV=production ./node_modules/.bin/webpack",
     "deploy": " npm run build && rsync -avz --delete -e \"ssh\" dist/ adrian@juszczak.io:/var/www/$DEPLOY_DIR",
     "test": "./node_modules/.bin/karma start",
