@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router, RouteConfig, RouteParams, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
-
+import { MdIconRegistry } from '@angular2-material/icon';
 import { Main } from './components/main/main.component';
 
 @Component({
@@ -9,7 +9,12 @@ import { Main } from './components/main/main.component';
   styles: [
     require('./app.styles.styl'),
   ],
-  directives: [ROUTER_DIRECTIVES],
+  providers: [
+    MdIconRegistry,
+  ],
+  directives: [
+    ROUTER_DIRECTIVES,
+  ],
 })
 @RouteConfig([
   {
